@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-
 class TreeNode:
     def __init__(self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None):
         self.val = val
         self.left = left
         self.right = right
-
 
 class Solution:
     def sortedArrayToBST(self, nums: list[int]) -> TreeNode | None:
@@ -18,7 +16,6 @@ class Solution:
         node.right = self.sortedArrayToBST(nums[mid + 1:])
         return node
 
-
 def is_valid_bst(node: TreeNode | None, lo: float = float('-inf'), hi: float = float('inf')) -> bool:
     if node is None:
         return True
@@ -26,12 +23,10 @@ def is_valid_bst(node: TreeNode | None, lo: float = float('-inf'), hi: float = f
         return False
     return is_valid_bst(node.left, lo, node.val) and is_valid_bst(node.right, node.val, hi)
 
-
 def height(node: TreeNode | None) -> int:
     if node is None:
         return 0
     return 1 + max(height(node.left), height(node.right))
-
 
 def is_height_balanced(node: TreeNode | None) -> bool:
     if node is None:
@@ -40,12 +35,10 @@ def is_height_balanced(node: TreeNode | None) -> bool:
             and is_height_balanced(node.left)
             and is_height_balanced(node.right))
 
-
 def inorder(node: TreeNode | None) -> list[int]:
     if node is None:
         return []
     return inorder(node.left) + [node.val] + inorder(node.right)
-
 
 if __name__ == "__main__":
     s = Solution()
