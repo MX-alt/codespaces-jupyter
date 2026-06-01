@@ -1,20 +1,45 @@
-# 🚀 Algorithm Portfolio
+# 🚀 Algorithm & Data Analysis Portfolio
+
+本リポジトリは、Python および Java を用いたアルゴリズムの実装と、Pandas を活用したデータ分析スキルの習得記録です。
 
 ### 🛠 Tech Stack
-- **Languages:** Python
+- **Languages:** Python 3, Java 17+
+- **Data Analysis:** Pandas
 - **Environment:** GitHub Codespaces
 
-### 📂 Contents
-| ファイル名 | 使用アルゴリズム / データ構造 | 概要 |
+---
+
+### 📂 1. Algorithm Mastery (16 Problems)
+アルゴリズムの計算量（Big-O）と言語特性（Python vs Java）を意識し、双方向で実装しています。
+
+| No. | 課題名 | 核心技術ポイント |
 | :--- | :--- | :--- |
-| **01-is_unique.py** | ハッシュセット (Hash Set) / ビット演算 | 与えられた文字列内に重複する文字がないかを $O(N)$ の時間計算量で判定します。 |
-| **02-anagram.py** | カウンター (Counter) / ハッシュマップ | 2つの文字列が互いにアナグラム（文字の並び替え）であるかを、出現回数の比定により判定します。 |
-| **03-urlify.py** | 双ポインタ (Two Pointers) / インプレース操作 | 文字列内のスペースを `%20` に置換します。末尾の余白を利用し、追加メモリを使わずに後ろから書き換える工夫を凝らしました。 |
-| **04-palindrome_permutation.py** | ハッシュセット (Hash Set) / カウント消去法 | 文字列を並び替えて回文（パレンドローム）にできる条件（奇数個の文字が1種類以下）を効率よく判定します。 |
-| **05-remove_duplicate_nodes.py** | ハッシュセット (Hash Set) / 単方向リスト走査 | 未ソートのリンクドリストから、最初に出現したノードを残して重複要素を $O(1)$ のポインタ操作で削除します。 |
-| **06-kth_to_last.py** | 双ポインタ (Two Pointers / Fast-Slow) | リストの全長を事前に数えることなく、2つのポインタの間隔を $k$ に保ち、1回の走査（One-Pass）で後ろから $k$ 番目のノードを特定します。 |
-| **07-delete_node.py** | インプレース値コピー (In-place Copy) | 通常必要な前方のノード（`prev`）の参照がない状態から、次のノードの値を現在地に上書きコピーし、次のノードをスキップすることで、事実上 $O(1)$ で要素を削除する特殊なテクニックです。 |
-| **08-triple_in_one.py** | 配列による多重スタック制御 (Multi-Stack) | 1つの連続した固定長配列を数学的配分公式（$\text{Index} = \text{stackNum} \times \text{size} + \text{current\_offset}$）で切り分け、メモリ断片化を防ぎつつ3つの独立したLIFO（後入れ先出し）構造をインプレースで制御する低レイヤのメモリ最適化手法です。 |
+| 01 | Is Unique | ハッシュセット, ビット演算 |
+| 02 | Anagram | ハッシュマップ (HashMap/Counter) |
+| 03 | URLify | 双ポインタ, インプレース操作 |
+| 04 | Palindrome Permutation | ビットベクトル, ハッシュ計数 |
+| 05 | Remove Duplicate Nodes | 単方向リスト, 内部クラス(ListNode) |
+| 06 | Kth to Last | 快慢ポインタ (One-Pass) |
+| 07 | Delete Node | ポインタ上書き O(1) 実装 |
+| 08 | Triple In One | 配列による多重スタック管理 |
+| 09~16 | 応用・構造系 | BST, 再帰, 動的計画法 |
 
 ---
-📍 *Ichikawa, Chiba*
+
+### 📊 2. Pandas Data Analysis (15 Projects)
+Pandas を用いたデータ前処理から分析パイプライン構築までの実践演習です。
+
+- **主な習得領域：**
+  - **データクレンジング**: 欠損値処理, 型変換, 重複排除.
+  - **データ操作**: フィルタリング, カラム編集, ソート.
+  - **高度な分析**: 多重結合 (Merge/Concat), 構造変形 (Pivot/Melt).
+
+---
+
+### 💡 技術的アピールポイント
+- **多言語実装**: Python と Java の両方で実装することで、言語固有のメモリ管理やオブジェクトモデルへの理解を深めています。
+- **効率的アルゴリズム**: 計算量 $O(N)$ だけでなく、空間計算量 $O(1)$ を目指したインプレース操作を積極的に採用しています。
+- **データドリブン志向**: Pandas を用いた一連のプロジェクトにより、データ解析のライフサイクルを全般的に遂行可能です。
+
+---
+*📍 Currently based in Ichikawa, Chiba*
