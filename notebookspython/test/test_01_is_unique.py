@@ -1,9 +1,9 @@
 import pytest
 
-from helpers import load_ipynb
+from helpers import load_py
 
 
-mod = load_ipynb("01-is-unique.ipynb", "is_unique")
+mod = load_py("01-is-unique.py", "is_unique")
 
 
 @pytest.mark.parametrize(

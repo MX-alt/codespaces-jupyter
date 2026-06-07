@@ -1,9 +1,9 @@
 import pytest
 
-from helpers import load_ipynb
+from helpers import load_py
 
 
-mod = load_ipynb("02-anagram.ipynb", "anagram")
+mod = load_py("02-anagram.py", "anagram")
 
 
 @pytest.mark.parametrize(

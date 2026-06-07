@@ -1,9 +1,9 @@
 import pytest
 
-from helpers import load_ipynb
+from helpers import load_py
 
 
-mod = load_ipynb("03-urlify.ipynb", "urlify")
+mod = load_py("03-urlify.py", "urlify")
 
 
 @pytest.mark.parametrize(
