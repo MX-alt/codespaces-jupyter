@@ -4,6 +4,9 @@ def compress_string(s: str) -> str:
     If the compressed string is not shorter than the original, return the
     original string.
     """
+    if not isinstance(s, str):
+        raise TypeError("Input must be a string.")
+
     if not s:
         return s
 
